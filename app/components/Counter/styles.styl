@@ -1,0 +1,78 @@
+$display-font-color = rgb(0,128,128)
+
+/* plus button */
+$plus-color = #F69
+$plus-bg-color = #FFC1D6
+
+$plus-hover-color = #FFF
+$plus-bg-hover-color = #F69
+
+$plus-active-color = #FFF
+$plus-bg-active-color = #FFC1D6
+
+/* minus button */
+$minus-color = #6495ED
+$minus-bg-color = #D0DFF9
+
+$minus-hover-color = #FFF
+$minus-bg-hover-color = #6495ED
+
+$minus-active-color = #FFF
+$minus-bg-active-color = #D0DFF9
+
+.block {
+  margin 30px
+  text-align center
+}
+
+.msgBlock {
+  margin-top 100px
+  text-align center
+  font-weight bold
+  font-size 28px
+  color $display-font-color
+}
+
+.Btn {
+  width 200px
+  margin 10px
+  padding 5px
+  font-weight bold
+  font-size 24px
+  border-radius 15px
+  border 2px solid
+  &:active,
+  &:focus {
+    outline none
+  }
+}
+
+.plusBtn {
+  @extends .Btn;
+  border-color $plus-color
+  color $plus-color
+  background-color $plus-bg-color
+  &:hover {
+    color $plus-hover-color
+    background-color $plus-bg-hover-color
+  }
+  &:active {
+    color $plus-active-color
+    background-color $plus-bg-active-color
+  }
+}
+
+.minusBtn {
+  @extends .Btn;
+  border-color $minus-color
+  color $minus-color
+  background-color $minus-bg-color
+  &:hover {
+    color $minus-hover-color
+    background-color $minus-bg-hover-color
+  }
+  &:active {
+    color $minus-active-color
+    background-color $minus-bg-active-color
+  }
+}
