@@ -9,7 +9,6 @@
     "clean": "rimraf dist && rm -f dist/*",
     "deploy": "npm run clean && npm run build && npm run gh",
     "gh": "gh-pages -d dist",
-    "test-tape": "babel-node ./test/sagas.js | tap-spec",
     "test": "cd ./app && NODE_ENV=test babel-node ../node_modules/.bin/_mocha --recursive --compilers js:babel-core/register",
     "cover": "cd ./app && NODE_ENV=test babel-node ../node_modules/.bin/istanbul cover --report text --report html ../node_modules/.bin/_mocha -- --recursive --compilers js:babel-core/register"
   },
@@ -41,8 +40,6 @@
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.0",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.5.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
